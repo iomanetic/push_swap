@@ -3,9 +3,9 @@
 void    status_sort(t_ci **stack_a, t_ci **stack_b, int status)
 {
     if (stack_a)
-        clear_lst(stack_a);
+        clear_list(stack_a);
     if (stack_b)
-        clear_lst(stack_b);
+        clear_list(stack_b);
     if (!status)
         ft_putstr_fd(RED KO WHITE, 1);
     else

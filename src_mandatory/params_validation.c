@@ -12,23 +12,6 @@
 
 #include "./includes/push_swap.h"
 
-static void	error_validation(t_stacks **stack_a, char **arr)
-{
-	int			i;
-
-	i = 0;
-	(void)arr;
-	if(stack_a)
-		clear_list(stack_a);
-	if (arr)
-	{
-		while (arr[i])
-			free(arr[i++]);
-	}
-	ft_putstr_fd(YELLOW EVP WHITE, 1);
-	exit(0);
-}
-
 static void	main_validation(t_stacks **stack_a, char **tmp)
 {
 	int	i;
@@ -43,12 +26,12 @@ static void	main_validation(t_stacks **stack_a, char **tmp)
 		while(tmp[i][j])
 		{
 			if(!ft_isdigit(tmp[i][j]))
-				error_validation(stack_a, tmp);
+				ft_error(stack_a, FALSE, tmp);
 			j++;
 		}
 		if(ft_latoi(tmp[i]) < -2147483648
 			|| ft_latoi(tmp[i]) > 2147483647)
-			error_validation(stack_a, tmp);
+			ft_error(stack_a, FALSE, tmp);
 		i++;
 	}
 }
@@ -67,7 +50,7 @@ void    check_space(char *ag, t_stacks **stack_a, char **tmp)
         i++;
     }
     if(spaces == (int)ft_strlen(ag))
-        error_validation(stack_a, tmp);
+        ft_error(stack_a, FALSE, tmp);
     return ;
 }
 
@@ -82,7 +65,7 @@ void	params_validation(t_stacks **stack_a, char **ag)
 	{
 		j = 0;
 		if (ag[i][0] == '\0')
-			error_validation(stack_a, FALSE);
+			ft_error(stack_a, FALSE, FALSE);
 		tmp = ft_split(ag[i], ' ');
 		check_space(ag[i], stack_a, tmp);
 		main_validation(stack_a, tmp);

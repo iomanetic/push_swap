@@ -10,8 +10,8 @@ SRC		=	checker_bonus.c \
 			validation_params_bonus.c \
 			check_sort_bonus.c \
 			check_duplicats.c \
+			error.c \
 			./lst/ft_lenlist.c \
-			./lst/clear_lst.c \
 			./lst/ft_lstnew.c \
 			./lst/ft_lstpushback.c \
 			./lst/ft_reflstelem.c \

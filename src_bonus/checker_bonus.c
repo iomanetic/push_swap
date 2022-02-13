@@ -12,16 +12,6 @@
 
 #include "includes/checker_bonus.h"
 
-void    error_action(t_ci **stack_a, t_ci **stack_b)
-{
-    if (stack_a)
-        clear_lst(stack_a);
-    if (stack_b)
-        clear_lst(stack_a);
-    ft_putstr_fd(STANDART_ERROR, 1);
-    exit(FALSE);
-}
-
 int    pars_commands(char *line, t_ci **stack_a, t_ci **stack_b)
 {
     if (!ft_strcmp(line, "pa\n"))
@@ -57,11 +47,13 @@ void	accept_input(t_ci **stack_a, t_ci **stack_b)
 
     while (1)
     {
+        if(get_next_line(2))
+            exit(0);
         line = get_next_line(0);
         if (!line)
             return ;
         if (!pars_commands(line, stack_a, stack_b))
-            error_action(stack_a, stack_b);
+            ft_error(stack_a, stack_b, FALSE);
         free(line);
     }
 }
@@ -77,12 +69,12 @@ int main(int argc, char **argv)
     main_validation(&argv[1], &stack_a);
     if(ft_lenlist(stack_a) < 1)
     {
-        clear_lst(&stack_a);
+        clear_list(&stack_a);
         return (FALSE);
     }
     main_check_dup(&stack_a);
     accept_input(&stack_a, &stack_b);
     check_sort_lst(&stack_a, &stack_b);
-    clear_lst(&stack_a);
+    clear_list(&stack_a);
 	return (0);
 }

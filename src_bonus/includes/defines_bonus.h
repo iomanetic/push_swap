@@ -24,7 +24,7 @@
 # ifndef MESSAGES
 #  define MESSAGES
 
-#  define STANDART_ERROR "Error\n"
+#  define ERROR "Error\n"
 #  define OK "OK\n"
 #  define KO "KO\n"
 #endif

@@ -12,23 +12,6 @@
 
 #include "./includes/push_swap.h"
 
-void	clear_list(t_stacks **stack_a)
-{
-	t_stacks	*tmp;
-
-	if(stack_a)
-	{
-		tmp = *stack_a;
-		while (*stack_a)
-		{
-			*stack_a = (*stack_a)->next;
-			free(tmp);
-			tmp = *stack_a;
-		}
-		free((*stack_a));
-	}
-}
-
 static int	*burn_arr(t_stacks **stack)
 {
 	int			i;

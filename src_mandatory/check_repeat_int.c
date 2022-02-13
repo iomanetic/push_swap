@@ -12,13 +12,6 @@
 
 #include "./includes/push_swap.h"
 
-static void	error_repeat(t_stacks **stack_a)
-{
-	ft_putstr_fd(YELLOW ERS WHITE, 1);
-	clear_list(stack_a);
-	exit(FALSE);
-}
-
 static void	search_repeat(t_stacks **stack_a, t_stacks *jump, int data)
 {
 	t_stacks	*tmp;
@@ -31,7 +24,7 @@ static void	search_repeat(t_stacks **stack_a, t_stacks *jump, int data)
 		else
 		{
 			if (tmp->data == data)
-				error_repeat(stack_a);
+				ft_error(stack_a, FALSE, FALSE);
 			tmp = tmp->next;
 		}
 	}
@@ -76,6 +69,6 @@ void	check_repeat(t_stacks **stack_a)
 	if (check_sortlst(stack_a))
 	{
 		clear_list(stack_a);
-		exit(FALSE);
+		exit(0);
 	}
 }

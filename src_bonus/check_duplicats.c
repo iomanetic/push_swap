@@ -1,12 +1,5 @@
 #include "includes/checker_bonus.h"
 
-void    error_duplicats(t_ci **stack_a)
-{
-    clear_lst(stack_a);
-    ft_putstr_fd(STANDART_ERROR, 1);
-    exit(FALSE);
-}
-
 void    check_duplicats(t_ci **stack_a, t_ci *jump, int data)
 {
     t_ci    *tmp;
@@ -19,7 +12,7 @@ void    check_duplicats(t_ci **stack_a, t_ci *jump, int data)
         else
         {
             if (tmp->data == data)
-                error_duplicats(stack_a);
+                ft_error(stack_a, FALSE, FALSE);
             else
                 tmp = tmp->next;
         }

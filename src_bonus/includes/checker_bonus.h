@@ -41,7 +41,7 @@ void	    ss(t_ci **stack_a, t_ci **stack_b);
 void	    ft_pushback(t_ci **lst, t_ci *elem);
 int	        ft_lenlist(t_ci *lst);
 t_ci        *ft_lstnew(int data);
-void        clear_lst(t_ci **lst);
+void		clear_list(t_ci **stack);
 t_ci	    *ft_refelem(t_ci **stack);
 t_ci	    *prelast_elem(t_ci *stack);
 t_ci	    *ft_lastelem(t_ci *elem);
@@ -50,9 +50,10 @@ t_ci	    *ft_lastelem(t_ci *elem);
 # ifndef MAIN_FUNC
 #  define MAIN_FUNC
 
-void    main_validation(char **ag, t_ci **stack_a);
-void    check_sort_lst(t_ci **stack_a, t_ci **stack_b);
-void    main_check_dup(t_ci **stack_a);
+void		main_validation(char **ag, t_ci **stack_a);
+void		check_sort_lst(t_ci **stack_a, t_ci **stack_b);
+void		main_check_dup(t_ci **stack_a);
+void		ft_error(t_ci **stack_a, t_ci **stack_b, char **tmp);
 #endif
 
 #endif

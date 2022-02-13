@@ -74,6 +74,8 @@ int			min_value(t_stacks **stack_b);
 
 void		params_validation(t_stacks **stack_a, char **ag);
 void	    check_repeat(t_stacks **stack_a);
+void		ft_error(t_stacks **stack_a, t_stacks **stack_b, char **tmp);
+void		clear_list(t_stacks **stack_a);
 # endif
 
 #endif

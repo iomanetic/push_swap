@@ -21,9 +21,7 @@
 
 # ifndef ERROR_MESSAGE
 #  define ERROR_MESAGE
-#  define EVP "validation error\n"
-#  define ERS "please remove repeats symbols\n"
-#  define ESN "your numbers is sorted\n"
+#  define ERROR "Error\n"
 # endif
 
 # ifndef VALUE

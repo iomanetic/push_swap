@@ -9,6 +9,7 @@ CFLAGS	=		-Wall -Wextra -Werror
 SRC		=		push_swap.c \
 				params_validation.c \
 				check_repeat_int.c \
+				error.c \
 				./lst/ft_lstnew.c \
 				./lst/ft_lstpushback.c \
 				./lst/ft_addlstfront.c \
