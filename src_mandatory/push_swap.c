@@ -61,13 +61,16 @@ int	main(int argc, char **argv)
 	(void)argc;
 	stack_a = NULL;
 	stack_b = NULL;
-	params_validation(&stack_a, &argv[1]);
-	check_repeat(&stack_a);
-	arr = burn_arr(&stack_a);
-	arr_sort(&arr, stack_a);
-	burn_order(&stack_a, &arr);
-	ft_sorts(&stack_a, &stack_b);
-	clear_list(&stack_a);
-	free(arr);
+	if(argc > 1)
+	{
+		params_validation(&stack_a, &argv[1]);
+		check_repeat(&stack_a);
+		arr = burn_arr(&stack_a);
+		arr_sort(&arr, stack_a);
+		burn_order(&stack_a, &arr);
+		ft_sorts(&stack_a, &stack_b);
+		clear_list(&stack_a);
+		free(arr);
+	}
 	return (0);
 }

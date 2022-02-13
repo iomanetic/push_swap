@@ -47,8 +47,6 @@ void	accept_input(t_ci **stack_a, t_ci **stack_b)
 
     while (1)
     {
-        if(get_next_line(2))
-            exit(0);
         line = get_next_line(0);
         if (!line)
             return ;

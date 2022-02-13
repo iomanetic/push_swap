@@ -21,6 +21,8 @@ static void	main_validation(t_stacks **stack_a, char **tmp)
 	while(tmp[i])
 	{
 		j = 0;
+		if(tmp[i][0] == '-' && tmp[i][1] == '\0')
+			ft_error(stack_a, FALSE, tmp);
 		if(tmp[i][0] == '-')
 			j++;
 		while(tmp[i][j])
