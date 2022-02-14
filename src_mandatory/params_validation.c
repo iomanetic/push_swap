@@ -31,8 +31,8 @@ static void	main_validation(t_stacks **stack_a, char **tmp)
 				ft_error(stack_a, FALSE, tmp);
 			j++;
 		}
-		if(ft_latoi(tmp[i]) < -2147483648
-			|| ft_latoi(tmp[i]) > 2147483647)
+		if(ft_latoi(tmp[i]) < INT_MIN
+			|| ft_latoi(tmp[i]) > INT_MAX)
 			ft_error(stack_a, FALSE, tmp);
 		i++;
 	}
@@ -56,7 +56,30 @@ void    check_space(char *ag, t_stacks **stack_a, char **tmp)
     return ;
 }
 
- 
-		i++;
-	}
+ void    params_validation(t_stacks **stack_a, char **ag)
+{
+    int     i;
+    int     j;
+    char    **tmp;
+
+    i = 0;
+	tmp = NULL;
+    while(ag[i])
+    {
+        j = 0;
+        if(ag[i][j] == '\0')
+            ft_error(stack_a, FALSE, FALSE);
+        check_space(ag[i], stack_a, tmp);
+        tmp = ft_split(ag[i], ' ');
+        main_validation(stack_a, tmp);
+        while(tmp[j])
+        {
+            ft_pushback(stack_a, ft_lstnew(ft_atoi(tmp[j])));
+            free(tmp[j]);
+            j++;
+        }
+        free(tmp);
+		tmp = NULL;
+        i++;
+    }
 }

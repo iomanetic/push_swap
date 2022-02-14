@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include "defines.h"
 # include "structs.h"
+# include <limits.h>
 # include "../../libs/libft/libft.h"
 
 # ifndef LISTS

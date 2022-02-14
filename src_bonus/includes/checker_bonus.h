@@ -14,6 +14,7 @@
 # define CHECKER_BONUS_H
 
 # include <unistd.h>
+# include <limits.h>
 # include "../../libs/libft/libft.h"
 # include "defines_bonus.h"
 # include "structs_bonus.h"

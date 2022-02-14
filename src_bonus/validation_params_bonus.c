@@ -19,8 +19,8 @@ static void string_validation(char **tmp, t_ci **stack_a)
                 ft_error(stack_a, FALSE, tmp);
             j++;
         }
-        if(ft_latoi(tmp[i]) > 2147483647
-            || ft_latoi(tmp[i]) < -2147483648)
+        if(ft_latoi(tmp[i]) < INT_MIN
+            || ft_latoi(tmp[i]) > INT_MAX)
             ft_error(stack_a, FALSE, tmp);
         i++;
     }
