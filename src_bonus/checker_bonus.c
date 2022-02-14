@@ -12,7 +12,7 @@
 
 #include "includes/checker_bonus.h"
 
-int    pars_commands(char *line, t_ci **stack_a, t_ci **stack_b)
+static int    pars_commands(char *line, t_ci **stack_a, t_ci **stack_b)
 {
     if (!ft_strcmp(line, "pa\n"))
         pa(stack_b, stack_a);
@@ -41,7 +41,7 @@ int    pars_commands(char *line, t_ci **stack_a, t_ci **stack_b)
     return (TRUE);
 }
 
-void	accept_input(t_ci **stack_a, t_ci **stack_b)
+static void	accept_input(t_ci **stack_a, t_ci **stack_b)
 {
     char    *line;
 
@@ -53,7 +53,7 @@ void	accept_input(t_ci **stack_a, t_ci **stack_b)
         if (!pars_commands(line, stack_a, stack_b))
             ft_error(stack_a, stack_b, FALSE);
         free(line);
-    }
+    }break
 }
 
 int main(int argc, char **argv)

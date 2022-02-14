@@ -1,6 +1,6 @@
 #include "includes/checker_bonus.h"
 
-void    check_duplicats(t_ci **stack_a, t_ci *jump, int data)
+static void    check_duplicats(t_ci **stack_a, t_ci *jump, int data)
 {
     t_ci    *tmp;
 

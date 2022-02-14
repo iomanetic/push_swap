@@ -30,7 +30,7 @@ static void	search_repeat(t_stacks **stack_a, t_stacks *jump, int data)
 	}
 }
 
-int	check_sortlst(t_stacks **stack_a)
+static int	check_sortlst(t_stacks **stack_a)
 {
 	t_stacks	*tmp_sort;
 	int			count_elem;

@@ -1,6 +1,6 @@
 #include "includes/checker_bonus.h"
 
-void    status_sort(t_ci **stack_a, t_ci **stack_b, int status)
+static void    status_sort(t_ci **stack_a, t_ci **stack_b, int status)
 {
     if (stack_a)
         clear_list(stack_a);
