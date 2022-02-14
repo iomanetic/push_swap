@@ -71,6 +71,7 @@ int	main(int argc, char **argv)
 		ft_sorts(&stack_a, &stack_b);
 		clear_list(&stack_a);
 		free(arr);
+		arr = NULL;
 	}
 	return (0);
 }

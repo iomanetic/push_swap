@@ -1,19 +1,20 @@
 #include "includes/push_swap.h"
 
-void	clear_list(t_stacks **stack_a)
+void	clear_list(t_stacks **stack)
 {
 	t_stacks	*tmp;
 
-	if(stack_a)
+	if(stack)
 	{
-		tmp = *stack_a;
-		while (*stack_a)
+		tmp = *stack;
+		while (*stack)
 		{
-			*stack_a = (*stack_a)->next;
+			*stack = (*stack)->next;
 			free(tmp);
-			tmp = *stack_a;
+			tmp = *stack;
 		}
-		free((*stack_a));
+		free((*stack));
+		stack = NULL;
 	}
 }
 
@@ -31,6 +32,7 @@ void	ft_error(t_stacks **stack_a, t_stacks **stack_b, char **tmp)
 		while(tmp[i])
 			free(tmp[i++]);
 		free(tmp);
+		tmp = NULL;
 	}
 	ft_putstr_fd(ERROR, 2);
 	exit(FALSE);

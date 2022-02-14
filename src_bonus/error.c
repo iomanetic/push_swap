@@ -12,6 +12,7 @@ void	clear_list(t_ci **stack)
 		tmp = *stack;
 	}
 	free((*stack));
+	stack = NULL;
 }
 
 void	ft_error(t_ci **stack_a, t_ci **stack_b, char **tmp)
@@ -28,6 +29,7 @@ void	ft_error(t_ci **stack_a, t_ci **stack_b, char **tmp)
 		while(tmp[i])
 			free(tmp[i++]);
 		free(tmp);
+		tmp = NULL;
 	}
 	ft_putstr_fd(ERROR, 2);
 	exit (FALSE);
