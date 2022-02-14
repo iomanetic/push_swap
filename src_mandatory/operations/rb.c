@@ -12,7 +12,6 @@
 
 #include "../includes/push_swap.h"
 
-/* first elem in stack B becoming last */
 void	rb(t_stacks **stack_b)
 {
 	t_stacks	*p_tmp;

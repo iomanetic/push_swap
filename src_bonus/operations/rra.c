@@ -12,7 +12,6 @@
 
 #include "../includes/checker_bonus.h"
 
-/* last elem becoming first in stack A */
 void	rra(t_ci **stack_a)
 {
 	t_ci	*tmp_pl;

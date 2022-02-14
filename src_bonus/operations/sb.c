@@ -12,7 +12,6 @@
 
 #include "../includes/checker_bonus.h"
 
-/* swap first two elem in stack B */
 void	sb(t_ci **stack)
 {
 	t_ci	*tmp_h;

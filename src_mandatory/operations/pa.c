@@ -12,7 +12,6 @@
 
 #include "../includes/push_swap.h"
 
-/* push in stack A */
 void	pa(t_stacks **stack_b, t_stacks **stack_a)
 {
 	t_stacks	*tmp;

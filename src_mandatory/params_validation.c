@@ -56,28 +56,7 @@ void    check_space(char *ag, t_stacks **stack_a, char **tmp)
     return ;
 }
 
-void	params_validation(t_stacks **stack_a, char **ag)
-{
-	int		i;
-	int		j;
-	char	**tmp;
-
-	i = 0;
-	while (ag[i])
-	{
-		j = 0;
-		if (ag[i][0] == '\0')
-			ft_error(stack_a, FALSE, FALSE);
-		tmp = ft_split(ag[i], ' ');
-		check_space(ag[i], stack_a, tmp);
-		main_validation(stack_a, tmp);
-		while (tmp[j])
-		{
-			ft_pushback(stack_a, ft_lstnew(ft_atoi(tmp[j])));
-			free(tmp[j]);
-			j++;
-		}
-		free(tmp);
+ 
 		i++;
 	}
 }

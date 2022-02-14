@@ -12,7 +12,6 @@
 
 #include "../includes/checker_bonus.h"
 
-/* rra + rrb */
 void	rrr(t_ci **stack_a, t_ci **stack_b)
 {
 	rra(stack_a);

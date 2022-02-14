@@ -12,7 +12,6 @@
 
 #include "../includes/push_swap.h"
 
-/* swap first two elem in stack A */
 void	sa(t_stacks **stack)
 {
 	t_stacks	*tmp_h;

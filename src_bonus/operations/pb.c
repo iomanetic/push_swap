@@ -12,7 +12,6 @@
 
 #include "../includes/checker_bonus.h"
 
-/* push in stack B */
 void	pb(t_ci **stack_a, t_ci **stack_b)
 {
 	t_ci	*tmp;

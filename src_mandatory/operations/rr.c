@@ -12,7 +12,6 @@
 
 #include "../includes/push_swap.h"
 
-/* ra + rb */
 void	rr(t_stacks **stack_a, t_stacks **stack_b)
 {
 	ra(stack_a);

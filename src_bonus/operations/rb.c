@@ -12,7 +12,6 @@
 
 #include "../includes/checker_bonus.h"
 
-/* first elem in stack B becoming last */
 void	rb(t_ci **stack_b)
 {
 	t_ci	*p_tmp;
