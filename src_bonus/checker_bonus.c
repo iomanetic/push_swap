@@ -53,7 +53,7 @@ static void	accept_input(t_ci **stack_a, t_ci **stack_b)
         if (!pars_commands(line, stack_a, stack_b))
             ft_error(stack_a, stack_b, FALSE);
         free(line);
-    }break
+    }
 }
 
 int main(int argc, char **argv)
