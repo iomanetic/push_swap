@@ -12,42 +12,23 @@
 
 #include "../includes/push_swap.h"
 
-int	*new_arr(t_stacks *stack_b, int *arr)
+int	sort_steps(t_stacks **stack_b)
 {
-	int	d;
+	t_stacks	*tmp;
+	int			med;
+	int			count;
 
-	if (!stack_b || !arr)
-		return (FALSE);
-	d = 0;
-	while (stack_b)
+	med = ft_lenlist(*stack_b) / 2;
+	tmp = *stack_b;
+	count = 0;
+	while (tmp->data != max_value(stack_b))
 	{
-		arr[d] = stack_b->data;
-		stack_b = stack_b->next;
-		d++;
+		tmp = tmp->next;
+		count++;
 	}
-	return (arr);
-}
-
-int	sort_steps(t_stacks **stack_b, int max_value, int size)
-{
-	int		z;
-	int		*arr;
-
-	arr = malloc(sizeof(int) * (size + 1));
-	if (!arr)
-		return (FALSE);
-	arr = new_arr(*stack_b, arr);
-	z = size;
-	while (arr[size] != max_value)
-		size--;
-	z = z - size;
-	size = 0;
-	while (arr[size] != max_value)
-		size++;
-	free(arr);
-	if (z < size)
-		return (TRUE);
-	return (FALSE);
+	if (count < med)
+		return (0);
+	return (1);
 }
 
 int	max_value(t_stacks **stack_b)
