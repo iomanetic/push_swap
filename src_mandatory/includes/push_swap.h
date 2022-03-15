@@ -65,7 +65,7 @@ void		ft_sorts(t_stacks **stack_a, t_stacks **stack_b);
 #  define SORT_UTILS
 
 int			*new_arr(t_stacks *stack_b, int *arr);
-int			sort_steps(t_stacks **stack_b, int max_value, int size);
+int			sort_steps(t_stacks **stack_b);
 int			max_value(t_stacks **stack_b);
 int			min_value(t_stacks **stack_b);
 # endif
