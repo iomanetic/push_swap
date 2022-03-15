@@ -19,10 +19,10 @@ static void	ft_stack_b(t_stacks **stack_b, t_stacks **stack_a)
 		if (!(*stack_b))
 			break ;
 		if ((*stack_b)->data != max_value(stack_b)
-			&& !sort_steps(stack_b, max_value(stack_b), ft_lenlist(*stack_b)))
+			&& !sort_steps(stack_b))
 			rb(stack_b);
 		else if ((*stack_b)->data != max_value(stack_b)
-			&& sort_steps(stack_b, max_value(stack_b), ft_lenlist(*stack_b)))
+			&& sort_steps(stack_b))
 			rrb(stack_b);
 		else if ((*stack_b)->data == max_value(stack_b))
 			pa(stack_b, stack_a);
